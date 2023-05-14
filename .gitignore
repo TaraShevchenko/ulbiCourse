@@ -1,0 +1,18 @@
+# IDE
+.idea
+.vscode
+
+# dependencies
+/node_modules
+
+# production
+/build
+
+# debug
+npm-debug.log*
+
+# local env files
+.env*.local
+
+# typescript
+*.tsbuildinfo
