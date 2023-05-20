@@ -6,12 +6,13 @@ import {Suspense} from "react";
 import {useTheme} from "./theme/useTheme";
 import ThemeProvider from "./theme/ThemeProvider";
 import './styles/index.scss';
+import {classNames} from "./helpers/classNames";
 
 const App = () => {
     const {theme, toggleTheme} = useTheme();
 
     return (
-        <div className={`app ${theme}`}>
+        <div className={classNames('app', {}, [theme])}>
             <div>
                 <button onClick={toggleTheme}>Toggle theme</button>
             </div>
