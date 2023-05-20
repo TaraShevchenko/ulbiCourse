@@ -4,6 +4,7 @@ import {BuildOptions} from "./types/config";
 function buildDevServer(options: BuildOptions): DevSeverConfiguration {
     return {
         port: options.port,
+        historyApiFallback: true,
     }
 }
 
