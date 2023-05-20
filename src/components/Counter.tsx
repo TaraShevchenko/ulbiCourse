@@ -3,6 +3,7 @@ import './style.scss'
 
 const Counter = () => {
     const [count, setCount] = useState(0);
+
     return (
         <div className="counter-wrapper">
             <h1>{count}</h1>
