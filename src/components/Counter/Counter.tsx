@@ -3,6 +3,7 @@ import cn from './style.module.scss'
 
 const Counter = () => {
     const [count, setCount] = useState(0);
+
     return (
         <div className={cn.counter_wrapper}>
             <h1 className={cn.h1}>{count}</h1>
