@@ -1,14 +1,12 @@
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import webpack, {WebpackPluginInstance} from "webpack";
+import {BuildOptions} from "./types/config";
 
-interface IBuildOptions {
-    htmlPath: string
-}
-function buildPlugins(optionsIBuildOptions: IBuildOptions): WebpackPluginInstance[] {
-    const {htmlPath} = optionsIBuildOptions
+function buildPlugins(options: BuildOptions): WebpackPluginInstance[] {
+    const {path} = options
     return [
         new HtmlWebpackPlugin({
-            template: htmlPath
+            template: path.html
         }),
         new webpack.ProgressPlugin()
     ];
