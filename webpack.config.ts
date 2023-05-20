@@ -13,9 +13,9 @@ export default (env: BuildEnv) => {
         isDev,
         port,
         path: {
-            entry: path.resolve(__dirname, 'src', 'index.ts'),
+            entry: path.resolve(__dirname, 'src', 'index.tsx'),
             build: path.resolve('build'),
-            html: path.resolve(__dirname, 'src', 'index.html'),
+            html: path.resolve(__dirname, 'public', 'index.html'),
         }
     })
 };
