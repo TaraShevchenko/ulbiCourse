@@ -1,4 +1,13 @@
 import {render} from "react-dom";
-import Counter from "./components/Counter";
+import Counter from "./components/Counter/Counter";
 
-render(<Counter />, document.getElementById('root'));
+const App = () => {
+    return (
+        <div className="app">
+            <h1>React TypeScript Webpack Starter Template</h1>
+            <Counter />
+        </div>
+    );
+}
+
+render(<App />, document.getElementById('root'));
