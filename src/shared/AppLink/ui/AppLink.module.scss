@@ -1,0 +1,11 @@
+.AppLink {
+
+  &.default {
+    color: var(--primary-color);
+  }
+
+  &.inverted {
+    color: var(--primary-inverted-color);
+  }
+}
+
