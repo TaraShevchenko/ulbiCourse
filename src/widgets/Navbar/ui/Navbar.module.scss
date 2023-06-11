@@ -1,0 +1,12 @@
+.Navbar {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  gap: 20px;
+  background: var(--bg-inverted-color);
+}
+
+.ThemeToggleButton {
+  margin-left: auto;
+}
