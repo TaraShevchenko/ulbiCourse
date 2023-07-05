@@ -3,6 +3,10 @@
 @import "themes/normal";
 @import "themes/dark";
 
+* {
+    box-sizing: content-box;
+}
+
 .app {
     font: var(--font-m);
 

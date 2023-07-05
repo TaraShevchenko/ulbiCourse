@@ -3,16 +3,16 @@ import cls from './AppLink.module.scss'
 import {Link, LinkProps} from 'react-router-dom'
 import clsx from 'clsx'
 
-export enum AppLinkTheme {
+export enum EAppLinkTheme {
     DEFAULT = 'default',
     INVERTED = 'inverted',
 }
 interface IAppLinkProps extends LinkProps {
     className?: string;
-    theme?: AppLinkTheme;
+    theme?: EAppLinkTheme;
 }
 
-const AppLink: FC<IAppLinkProps> = ({theme = AppLinkTheme.DEFAULT, className, children, ...otherProps}) => {
+const AppLink: FC<IAppLinkProps> = ({theme = EAppLinkTheme.DEFAULT, className, children, ...otherProps}) => {
     return (
         <Link className={clsx(cls.AppLink, [className, cls[theme]])} {...otherProps}>
             {children}

@@ -1,6 +1,6 @@
-import AppLink, { AppLinkTheme } from './ui/AppLink'
+import AppLink, { EAppLinkTheme } from './ui/AppLink'
 
 export {
-    AppLinkTheme,
+    EAppLinkTheme,
     AppLink,
 }
