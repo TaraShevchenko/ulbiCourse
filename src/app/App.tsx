@@ -5,6 +5,7 @@ import {useTheme} from "app/providers/theme";
 import {AppRouter} from "app/providers/router";
 
 import {Navbar} from "../widgets/Navbar";
+import {Sidebar} from "../widgets/Sidebar";
 import './styles/index.scss';
 
 const App = () => {
@@ -13,7 +14,10 @@ const App = () => {
     return (
         <div className={clsx('app', [theme])}>
             <Navbar />
-            <AppRouter />
+            <div className={clsx('content')}>
+                <Sidebar />
+                <AppRouter />
+            </div>
         </div>
     );
 };
