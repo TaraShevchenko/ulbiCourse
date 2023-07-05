@@ -6,14 +6,12 @@ import DarkModeIcon from "shared/assets/icons/dark-mode.svg"
 import LightModeIcon from "shared/assets/icons/light-mode.svg"
 import {Button, IButtonProps} from "shared/Button";
 
-interface IThemeSwitcherProps extends IButtonProps {
-    className?: string;
-}
+interface IThemeSwitcherProps extends IButtonProps {}
 
-const ThemeSwitcher: FC<IThemeSwitcherProps> = ({className}) => {
-    const {theme, toggleTheme} = useTheme();
+const ThemeSwitcher: FC<IThemeSwitcherProps> = ({className, ...otherProps}) => {
+    const {theme} = useTheme();
     return (
-        <Button onClick={toggleTheme} className={clsx(cls.ThemeSwitcher, [className])}>
+        <Button className={clsx(cls.ThemeSwitcher, cls.ThemeSwitcherTest)} {...otherProps}>
             {theme === ETheme.DARK ? <DarkModeIcon/> : <LightModeIcon/>}
         </Button>
     );
