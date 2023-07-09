@@ -9,9 +9,9 @@ import {Button, IButtonProps} from "shared/Button";
 interface IThemeSwitcherProps extends IButtonProps {}
 
 const ThemeSwitcher: FC<IThemeSwitcherProps> = ({className, ...otherProps}) => {
-    const {theme} = useTheme();
+    const {theme, toggleTheme} = useTheme();
     return (
-        <Button className={clsx(cls.ThemeSwitcher, cls.ThemeSwitcherTest)} {...otherProps}>
+        <Button className={clsx(cls.ThemeSwitcher, cls.ThemeSwitcherTest)} onClick={toggleTheme} {...otherProps}>
             {theme === ETheme.DARK ? <DarkModeIcon/> : <LightModeIcon/>}
         </Button>
     );

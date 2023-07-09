@@ -2,5 +2,11 @@
   width: var(--sidebar-width);
   height: calc(100vh - var(--navbar-height));
 
+  padding: var(--padding-size-s);
   background: var(--bg-inverted-color);
+  transition: width .3s ease-in-out;
+  
+  &.active {
+    width: var(--sidebar-collapsed-width);
+  }
 }
