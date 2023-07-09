@@ -14,9 +14,11 @@ const App = () => {
     return (
         <div className={clsx('app', [theme])}>
             <Navbar />
-            <div className={clsx('content')}>
+            <div className={'content-wrapper'}>
                 <Sidebar />
-                <AppRouter />
+                <div className={'content'}>
+                    <AppRouter />
+                </div>
             </div>
         </div>
     );
