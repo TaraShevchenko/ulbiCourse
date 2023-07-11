@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Suspense} from 'react';
 import clsx from "clsx";
 
 import {useTheme} from "app/providers/theme";
@@ -8,25 +8,19 @@ import {Navbar} from "../widgets/Navbar";
 import {Sidebar} from "../widgets/Sidebar";
 import './styles/index.scss';
 
-import { useTranslation } from "react-i18next";
-import 'shared/config/i18n'
-
-
-
 const App = () => {
-    const { theme } = useTheme();
-    const { t } = useTranslation();
-
+    const {theme} = useTheme();
     return (
         <div className={clsx('app', [theme])}>
-            <Navbar />
-            <div className={'content-wrapper'}>
-                <Sidebar />
-                <div className={'content'}>
-                    <h2>{t('test')}</h2>
-                    <AppRouter />
+            <Suspense fallback={<div>Loading...</div>}>
+                <Navbar/>
+                <div className={'content-wrapper'}>
+                    <Sidebar/>
+                    <div className={'content'}>
+                        <AppRouter/>
+                    </div>
                 </div>
-            </div>
+            </Suspense>
         </div>
     );
 };

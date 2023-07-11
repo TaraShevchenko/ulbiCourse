@@ -1,7 +1,7 @@
 import {FC} from "react";
 import cls from "./SidebarSwitcher.module.scss";
 import clsx from "clsx";
-import {Button, IButtonProps} from "shared/Button";
+import {Button, IButtonProps} from "shared/ui/Button";
 import BurgerIcon from "shared/assets/icons/burger.svg"
 import CloseIcon from "shared/assets/icons/close.svg"
 
