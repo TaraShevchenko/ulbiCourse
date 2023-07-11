@@ -1,0 +1,11 @@
+{
+  "lang": {
+    "en-US": "English",
+    "ru": "Russian",
+    "ua": "Ukrainian"
+  },
+  "menu": {
+    "main": "Home",
+    "about": "About"
+  }
+}
