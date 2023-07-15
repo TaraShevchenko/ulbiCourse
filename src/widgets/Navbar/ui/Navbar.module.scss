@@ -1,11 +1,8 @@
 .Navbar {
-  height: var(--navbar-height);
-
-  display: flex;
-  align-items: center;
-
-  padding: 0 var(--padding-size-s);
-  gap: 20px;
-
-  background: var(--bg-inverted-color);
+    height: var(--navbar-height);
+    display: flex;
+    align-items: center;
+    padding: 0 var(--padding-size-s);
+    gap: 20px;
+    background: var(--bg-inverted-color);
 }

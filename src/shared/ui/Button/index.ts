@@ -1,6 +1,6 @@
-import Button, {IButtonProps} from './ui/Button'
+import Button, { IButtonProps } from './ui/Button';
 
 export {
     Button,
-    IButtonProps
-}
+    IButtonProps,
+};
