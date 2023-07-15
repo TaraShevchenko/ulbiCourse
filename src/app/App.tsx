@@ -1,26 +1,24 @@
-import React, {Suspense} from 'react';
-import clsx from "clsx";
+import React from 'react';
+import clsx from 'clsx';
 
-import {useTheme} from "app/providers/theme";
-import {AppRouter} from "app/providers/router";
+import { useTheme } from 'app/providers/theme';
+import { AppRouter } from 'app/providers/router';
 
-import {Navbar} from "../widgets/Navbar";
-import {Sidebar} from "../widgets/Sidebar";
+import { Navbar } from '../widgets/Navbar';
+import { Sidebar } from '../widgets/Sidebar';
 import './styles/index.scss';
 
 const App = () => {
-    const {theme} = useTheme();
+    const { theme } = useTheme();
     return (
         <div className={clsx('app', [theme])}>
-            <Suspense fallback={<div>Loading...</div>}>
-                <Navbar/>
-                <div className={'content-wrapper'}>
-                    <Sidebar/>
-                    <div className={'content'}>
-                        <AppRouter/>
-                    </div>
+            <Navbar />
+            <div className="content-wrapper">
+                <Sidebar />
+                <div className="content">
+                    <AppRouter />
                 </div>
-            </Suspense>
+            </div>
         </div>
     );
 };

@@ -1,20 +1,20 @@
-import {Configuration} from "webpack";
-import {BuildOptions} from "./types/config";
-import buildPlugins from "./buildPlugins";
-import buildLoaders from "./buildLoaders";
-import buildResolvers from "./buildResolvers";
-import buildDevServer from "./buildDevServer";
+import { Configuration } from 'webpack';
+import { BuildOptions } from './types/config';
+import buildPlugins from './buildPlugins';
+import buildLoaders from './buildLoaders';
+import buildResolvers from './buildResolvers';
+import buildDevServer from './buildDevServer';
 
 function buildWebpackConfig(options: BuildOptions): Configuration {
-    const {mode, path, isDev} = options
-    const {entry, build} = path
-    return  {
-        mode: mode,
+    const { mode, path, isDev } = options;
+    const { entry, build } = path;
+    return {
+        mode,
         entry,
         output: {
             filename: 'bundle.js',
             path: build,
-            clean: true
+            clean: true,
         },
         plugins: buildPlugins(options),
         module: {
@@ -22,8 +22,8 @@ function buildWebpackConfig(options: BuildOptions): Configuration {
         },
         resolve: buildResolvers(options),
         devtool: isDev ? 'inline-source-map' : undefined,
-        devServer: isDev ? buildDevServer(options) : undefined
-    }
+        devServer: isDev ? buildDevServer(options) : undefined,
+    };
 }
 
 export default buildWebpackConfig;
