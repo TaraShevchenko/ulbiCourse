@@ -17,8 +17,8 @@ const Navbar: FC<INavbarProps> = ({ className }) => {
     const { t } = useTranslation();
     return (
         <div className={clsx(cls.Navbar, [className])}>
-            <AppLink to={`/${RoutePath[AppRoutes.MAIN]}`} theme={EAppLinkTheme.INVERTED}>{t('menu.main')}</AppLink>
-            <AppLink to={`/${RoutePath[AppRoutes.ABOUT]}`} theme={EAppLinkTheme.INVERTED}>{t('menu.about')}</AppLink>
+            <AppLink to={RoutePath[AppRoutes.MAIN]} theme={EAppLinkTheme.INVERTED}>{t('menu.main')}</AppLink>
+            <AppLink to={RoutePath[AppRoutes.ABOUT]} theme={EAppLinkTheme.INVERTED}>{t('menu.about')}</AppLink>
             <ThemeSwitcher />
             <LangSwitcher />
         </div>
