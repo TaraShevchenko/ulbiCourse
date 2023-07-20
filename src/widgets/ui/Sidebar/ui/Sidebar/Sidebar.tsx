@@ -1,6 +1,6 @@
 import { FC, useState } from 'react';
 import clsx from 'clsx';
-import SidebarSwitcher from 'widgets/Sidebar/ui/SidebarSwitcher/SidebarSwitcher';
+import SidebarSwitcher from 'widgets/ui/Sidebar/ui/SidebarSwitcher/SidebarSwitcher';
 import cls from './Sidebar.module.scss';
 
 interface ISidebarProps {
