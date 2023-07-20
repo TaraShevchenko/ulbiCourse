@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-props-no-spreading */
-import React, { FC } from 'react';
+import { FC } from 'react';
 import clsx from 'clsx';
 import { ETheme, useTheme } from 'app/providers/theme';
 import DarkModeIcon from 'shared/assets/icons/dark-mode.svg';

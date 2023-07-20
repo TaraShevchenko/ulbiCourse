@@ -1,12 +1,12 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import clsx from 'clsx';
+import { useTranslation } from 'react-i18next';
 
 import { AppLink, EAppLinkTheme } from 'shared/ui/AppLink';
-
-import { ThemeSwitcher } from 'widgets/ThemeSwitcher';
-import { useTranslation } from 'react-i18next';
-import LangSwitcher from 'widgets/LangSwitcher/ui/LangSwitcher';
 import { AppRoutes, RoutePath } from 'shared/config/route';
+import { ThemeSwitcher } from 'widgets/ui/ThemeSwitcher';
+import LangSwitcher from 'widgets/ui/LangSwitcher/ui/LangSwitcher';
+
 import cls from './Navbar.module.scss';
 
 interface INavbarProps {

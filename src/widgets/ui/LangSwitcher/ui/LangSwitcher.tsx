@@ -1,8 +1,10 @@
 import { FC, useMemo, useState } from 'react';
 import clsx from 'clsx';
 import { useTranslation } from 'react-i18next';
+
 import { Button } from 'shared/ui/Button';
-import { ELanguages } from 'widgets/LangSwitcher/model/types';
+
+import { ELanguages } from '../model/types';
 import cls from './LangSwitcher.module.scss';
 
 interface ILangSwitcherProps {
