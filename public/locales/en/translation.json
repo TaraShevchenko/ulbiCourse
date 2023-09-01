@@ -9,5 +9,7 @@
   "menu": {
     "main": "Home",
     "about": "About"
-  }
+  },
+  "reload_page": "Reload page",
+  "error_boundary_page_desc": "Something went wrong. Please, try to reload page."
 }

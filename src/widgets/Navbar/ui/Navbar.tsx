@@ -4,8 +4,8 @@ import { useTranslation } from 'react-i18next';
 
 import { AppLink, EAppLinkTheme } from 'shared/ui/AppLink';
 import { AppRoutes, RoutePath } from 'shared/config/route';
-import { ThemeSwitcher } from 'widgets/ui/ThemeSwitcher';
-import LangSwitcher from 'widgets/ui/LangSwitcher/ui/LangSwitcher';
+import { ThemeSwitcher } from 'widgets/ThemeSwitcher';
+import LangSwitcher from 'widgets/LangSwitcher/ui/LangSwitcher';
 
 import cls from './Navbar.module.scss';
 
